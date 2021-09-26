@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vue tab name</title>
+    <style>
+      .box {
+        background-color: black;
+        height: 100px;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      {{ greeting}}
+      <input v-model="greeting" />
+      <hr />
+      <div v-show="isVisible" class="box"></div>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+      let app = Vue.createApp({
+        data: function () {
+          return { greeting: "greeting var", isVislbe: true };
+        },
+      });
+      app.mount("#app");
+    </script>
+  </body>
+</html>
